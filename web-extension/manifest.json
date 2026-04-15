@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "LLM Gatekeeper",
+    "version": "1.0",
+
+    "description": "Adding friction to AI tools in the browser",
+
+    "browser_specific_settings": {
+        "gecko":{
+            "id": "llmgatekeeper@AI.ai",
+            "data_collection_permissions":{
+                "required": ["none"]
+            }
+        }
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["*://*.claude.ai/*", "*://*.chatgpt.com/*", "*://*.gemini.google.com/*"],
+            "js": ["gatekeeper.js"]
+        }
+    ]
+}
