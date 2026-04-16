@@ -1,5 +1,5 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "LLM Gatekeeper",
     "version": "1.0",
 
@@ -13,6 +13,12 @@
             }
         }
     },
+
+    "action": {
+        "default_popup": "options.html"
+    },
+
+    "permissions": ["storage"],
 
     "content_scripts": [
         {
